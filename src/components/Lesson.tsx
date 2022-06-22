@@ -1,21 +1,37 @@
 import React from 'react'
+import { CheckCircle, Lock } from 'phosphor-react'
+import { LessonProps } from '../types/eventPage/lesson'
+import { isPast, format } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
 
-export default function Lesson() {
+export default function Lesson(props: LessonProps) {
+  const isLessonAvailable = isPast(props.availableAt)
+  const availableDateFormated = format(props.availableAt, "EEEE' • 'd' de 'MMMM' • 'k'h'mm' ", { locale: ptBR })
   return (
-    <a href="#">
+    <a href={`${props.slug}`}>
       <span className='text-gray-300'>
-        Terça • 22 de junho • 19h00
+        {availableDateFormated}
       </span>
       <div className='rounded border border-gray-500 p-4 mt-2'>
         <header className='flex items-center justify-between'>
-          <span className='text-sm font-medium text-blue-500'>
-            Conteúdo liberado
-          </span>
+          {isLessonAvailable ? (
+            <span className='text-sm font-medium text-blue-500 flex items-center gap-2'>
+              <CheckCircle size={20} />
+              Conteúdo liberado
+            </span>
+          ) : (
+            <span className='text-sm font-medium text-orange-500 flex items-center gap-2'>
+              <Lock size={20} />
+              Em Breve
+            </span>
+          )}
           <span className='text-xs rounded py-[0.125rem] px-2 text-green-300 border border-green-300 font-bold'>
-            AO VIVO
+            {props.type === "live" ? 'AO VIVO' : 'Aula Prática'}
           </span>
         </header>
-        <strong className='mt-5 block text-gray-200'>Abertura do evento Ignite labs</strong>
+        <strong className='mt-5 block text-gray-200'>
+          {props.title}
+        </strong>
       </div>
     </a>
   )

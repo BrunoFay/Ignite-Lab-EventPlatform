@@ -9,7 +9,7 @@ export default function EventPage() {
       <Header />
       <main className='flex flex-1'>
         <VideoPlayer />
-        <Sidebar/>
+        <Sidebar />
       </main>
     </div>
   )
