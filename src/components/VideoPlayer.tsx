@@ -1,12 +1,16 @@
 import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from 'phosphor-react'
-import React from 'react'
+import "@vime/core/themes/default.css"
+import { DefaultUi, Player, Youtube } from '@vime/react'
 
 export default function VideoPlayer() {
   return (
     <div className='flex-1'>
       <div className='bg-black flex justify-center'>
         <div className='h-full w-full max-w-[1100px] max-h-[60vh] aspect-video'>
-
+          <Player>
+            <Youtube videoId='bw8Le3XOTOw' />
+            <DefaultUi />
+          </Player>
         </div>
       </div>
       <div className='p-8 mx-auto max-w-[1100px]'>
@@ -51,46 +55,46 @@ export default function VideoPlayer() {
             </a>
           </div>
         </div>
-      <div className='gap-8 grid grid-cols-2 mt-20'>
-        <a
-          className='bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors'
-          href=""
-        >
-          <div className='bg-green-700 flex items-center h-full p-6'>
-            <FileArrowDown size={40} />
-          </div>
-          <div className='py-6 leading-relaxed'>
-            <strong className='text-xl'>
-              Material complementar
-            </strong>
-            <p className='mt-2 text-sm text-gray-200'>
-              Acesse o material complementar para acelerar o seu desenvolvimento
-            </p>
-          </div>
-          <div className='flex items-center h-full p-6'>
-            <CaretRight size={24} />
-          </div>
-        </a>
-        <a
-          className='bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors'
-          href=""
-        >
-          <div className='bg-green-700 flex items-center h-full p-6'>
-            <FileArrowDown size={40} />
-          </div>
-          <div className='py-6 leading-relaxed'>
-            <strong className='text-xl'>
-            Wallpapers exclusivos
-            </strong>
-            <p className='mt-2 text-sm text-gray-200'>
-            Baixe wallpapers exclusivos do Ignite Lab e personalize a sua máquina
-            </p>
-          </div>
-          <div className='flex items-center h-full p-6'>
-            <CaretRight size={24} />
-          </div>
-        </a>
-      </div>
+        <div className='gap-8 grid grid-cols-2 mt-20'>
+          <a
+            className='bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors'
+            href=""
+          >
+            <div className='bg-green-700 flex items-center h-full p-6'>
+              <FileArrowDown size={40} />
+            </div>
+            <div className='py-6 leading-relaxed'>
+              <strong className='text-xl'>
+                Material complementar
+              </strong>
+              <p className='mt-2 text-sm text-gray-200'>
+                Acesse o material complementar para acelerar o seu desenvolvimento
+              </p>
+            </div>
+            <div className='flex items-center h-full p-6'>
+              <CaretRight size={24} />
+            </div>
+          </a>
+          <a
+            className='bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors'
+            href=""
+          >
+            <div className='bg-green-700 flex items-center h-full p-6'>
+              <FileArrowDown size={40} />
+            </div>
+            <div className='py-6 leading-relaxed'>
+              <strong className='text-xl'>
+                Wallpapers exclusivos
+              </strong>
+              <p className='mt-2 text-sm text-gray-200'>
+                Baixe wallpapers exclusivos do Ignite Lab e personalize a sua máquina
+              </p>
+            </div>
+            <div className='flex items-center h-full p-6'>
+              <CaretRight size={24} />
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   )
