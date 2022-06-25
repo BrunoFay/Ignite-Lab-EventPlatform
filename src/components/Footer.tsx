@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className='w-full flex gap-6 md:gap-0 py-4 flex-col md:flex-row h-14 bg-[#0a0a0a] items-center justify-between px-5 border-t-2 border-gray-600'>
+    <footer className='w-full flex gap-6 md:gap-0 py-4 flex-col md:flex-row md:h-14  bg-[#0a0a0a] items-center justify-between px-5 border-t-2 border-gray-600'>
       <div className='flex gap-4 flex-col md:flex-row items-center'>
         <svg width="162" height="31" viewBox="0 0 162 31" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M33.7551 8.91846C32.3921 8.91846 31.2682 9.99448 31.2682 11.3512V16.4974V21.6436H33.7551V16.4974V11.3512H36.7202H39.6853V8.91846H36.7202H33.7551Z" fill="#E1E1E6" />
@@ -23,7 +23,7 @@ export default function Footer() {
           Rocketseat - Todos os direitos reservados
         </span>
       </div>
-      <span className='text-sm text-gray-400'>
+      <span className='text-sm text-gray-400 py-2 md:py-0'>
         Políticas de privacidade
       </span>
     </footer>
