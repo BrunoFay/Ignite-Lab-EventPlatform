@@ -1,9 +1,14 @@
-import React from 'react'
-import { CheckCircle, Lock } from 'phosphor-react'
-import { LessonProps } from '../types/eventPage/lesson'
-import { isPast, format } from 'date-fns'
+import { format, isPast } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
+import { CheckCircle, Lock } from 'phosphor-react'
 import { Link, useParams } from 'react-router-dom'
+
+type LessonProps = {
+  title: string
+  slug: string
+  availableAt: Date
+  type: 'class' | 'live'
+}
 
 export default function Lesson(props: LessonProps) {
   const isLessonAvailable = isPast(props.availableAt)
