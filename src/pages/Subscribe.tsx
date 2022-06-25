@@ -67,11 +67,7 @@ export default function Subscribe() {
           </form>
         </div>
       </div>
-      <img
-        src="/src/assets/images/secundaryHomePageblur.png"
-        alt="vscode blur"
-        className='mt-5'
-      />
+      <div className='bg-secondaryBlur h-[650px] w-[1216px]'  />
     </div>
   )
 }
