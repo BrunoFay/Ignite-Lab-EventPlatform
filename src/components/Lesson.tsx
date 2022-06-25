@@ -26,7 +26,7 @@ export default function Lesson(props: LessonProps) {
       <div className={`${isCurrentLesson ? 'bg-green-300 text-white' : ''} rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500 `}>
         <header className='flex items-center justify-between'>
           {isLessonAvailable ? (
-            <span className={`${isCurrentLesson ? ' text-white' : ''} text-sm font-medium text-blue-500 flex items-center gap-2`}>
+            <span className={`${isCurrentLesson ? 'text-white' : 'text-blue-500'} text-sm font-medium  flex items-center gap-2`}>
               <CheckCircle size={20} />
               Conteúdo liberado
             </span>
@@ -36,11 +36,11 @@ export default function Lesson(props: LessonProps) {
               Em Breve
             </span>
           )}
-          <span className={`${isCurrentLesson ? 'border-white text-white' : ''} text-xs rounded py-[0.125rem] px-2 text-green-300 border border-green-300 font-bold`}>
+          <span className={`${isCurrentLesson ? 'border-white text-white' : 'text-green-300 border-green-300'} text-xs rounded py-[0.125rem] px-2 border font-bold`}>
             {props.type === "live" ? 'AO VIVO' : 'Aula Prática'}
           </span>
         </header>
-        <strong className={`${isCurrentLesson ? 'text-white' : ''} mt-5 block text-gray-200`}>
+        <strong className={`${isCurrentLesson ? 'text-white' : 'text-gray-200'} mt-5 block `}>
           {props.title}
         </strong>
       </div>

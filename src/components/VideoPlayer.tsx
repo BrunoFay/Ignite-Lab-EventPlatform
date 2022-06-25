@@ -2,6 +2,7 @@ import "@vime/core/themes/default.css"
 import { DefaultUi, Player, Youtube } from '@vime/react'
 import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from 'phosphor-react'
 import { useGetLessonBySlugQuery } from '../graphql/generated'
+import Footer from "./Footer"
 
 export default function VideoPlayer(props: { lessonSlug: string }) {
   const { data } = useGetLessonBySlugQuery({
@@ -110,6 +111,8 @@ export default function VideoPlayer(props: { lessonSlug: string }) {
           </a>
         </div>
       </div>
+      <Footer />
+
     </div>
   )
 }
