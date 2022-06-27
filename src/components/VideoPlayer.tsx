@@ -66,7 +66,7 @@ export default function VideoPlayer(props: { lessonSlug: string }) {
             </a>
             <a
               href=""
-              className='flex gap-2 w-[85vw] sm:w-auto justify-center items-center p-4 text-sm font-bold uppercase rounded border border-blue-500 hover:bg-blue-500 hover:text-gray-900 transition-colors text-blue-500'
+              className='flex gap-2 w-[85vw] sm:w-[13.5rem] justify-center items-center p-4 text-sm font-bold uppercase rounded border border-blue-500 hover:bg-blue-500 hover:text-gray-900 transition-colors text-blue-500'
             >
               <Lightning size={24} />
               Acesse o dasafio
@@ -89,7 +89,7 @@ export default function VideoPlayer(props: { lessonSlug: string }) {
                 Acesse o material complementar para acelerar o seu desenvolvimento
               </p>
             </div>
-            <div className='flex items-center h-full p-6'>
+            <div className='flex items-center overflow-hidden h-full sm:p-6 p-2'>
               <CaretRight size={24} />
             </div>
           </a>
@@ -108,7 +108,7 @@ export default function VideoPlayer(props: { lessonSlug: string }) {
                 Baixe wallpapers exclusivos do Ignite Lab e personalize a sua máquina
               </p>
             </div>
-            <div className='flex items-center h-full p-6'>
+            <div className='flex items-center overflow-hidden h-full sm:p-6 p-2'>
               <CaretRight size={24} />
             </div>
           </a>
