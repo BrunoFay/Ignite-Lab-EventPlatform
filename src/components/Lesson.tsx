@@ -18,15 +18,15 @@ export default function Lesson(props: LessonProps) {
   return (
     <Link
       className='group'
-      to={`/event/lesson/${props.slug}`}
+      to={isLessonAvailable ? `/event/lesson/${props.slug}`: ''}
     >
       <span className='text-gray-300'>
         {availableDateFormated}
       </span>
-      <div className={`${isCurrentLesson ? 'bg-green-300 text-white' : ''} rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500 `}>
+      <div className={`${(isCurrentLesson && isLessonAvailable) ? 'bg-green-300 text-white' : ''} rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500 `}>
         <header className='flex items-center justify-between'>
           {isLessonAvailable ? (
-            <span className={`${isCurrentLesson ? 'text-white' : 'text-blue-500'} text-sm font-medium  flex items-center gap-2`}>
+            <span className={`${(isCurrentLesson && isLessonAvailable) ? 'text-white' : 'text-blue-500'} text-sm font-medium  flex items-center gap-2`}>
               <CheckCircle size={20} />
               Conteúdo liberado
             </span>
@@ -36,11 +36,11 @@ export default function Lesson(props: LessonProps) {
               Em Breve
             </span>
           )}
-          <span className={`${isCurrentLesson ? 'border-white text-white' : 'text-green-300 border-green-300'} text-xs rounded py-[0.125rem] px-2 border font-bold`}>
+          <span className={`${(isCurrentLesson && isLessonAvailable) ? 'border-white text-white' : 'text-green-300 border-green-300'} text-xs rounded py-[0.125rem] px-2 border font-bold`}>
             {props.type === "live" ? 'AO VIVO' : 'Aula Prática'}
           </span>
         </header>
-        <strong className={`${isCurrentLesson ? 'text-white' : 'text-gray-200'} mt-5 block `}>
+        <strong className={`${(isCurrentLesson && isLessonAvailable) ? 'text-white' : 'text-gray-200'} mt-5 block `}>
           {props.title}
         </strong>
       </div>

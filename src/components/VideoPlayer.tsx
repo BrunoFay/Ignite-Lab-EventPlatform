@@ -4,7 +4,7 @@ import { useContext } from "react"
 import { sidebarContext, SidebarContext } from "../context/sidebarContext"
 import { useGetLessonBySlugQuery } from '../graphql/generated'  
 import Footer from "./Footer"
-import "@vime/core/themes/defa  ult.css"
+import "@vime/core/themes/default.css"
 
 export default function VideoPlayer(props: { lessonSlug: string }) {
   const { isSidebarOpen } = useContext(sidebarContext) as SidebarContext
