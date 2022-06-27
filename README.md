@@ -13,7 +13,8 @@ Projeto desenvolvido durante o evento da <a href="https://www.rocketseat.com.br/
 - TypeScript
 - TailwindCSS
 
-## Para visualizar um video, clique na imagem abaixo !
+## Layout
+You can view the layout of the original project through this [Link](https://www.figma.com/community/file/1120711251998877938). ***You need a Figma account to access it.***
 
 [![Watch the video](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvX7XjW8SbO7M8RFY41EYr8WtFq9QouZ7L5A&usqp=CAU)](https://youtu.be/UKU1QrKB_kg)
 
