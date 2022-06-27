@@ -1,10 +1,10 @@
-import "@vime/core/themes/default.css"
 import { DefaultUi, Player, Youtube } from '@vime/react'
 import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from 'phosphor-react'
 import { useContext } from "react"
 import { sidebarContext, SidebarContext } from "../context/sidebarContext"
-import { useGetLessonBySlugQuery } from '../graphql/generated'
+import { useGetLessonBySlugQuery } from '../graphql/generated'  
 import Footer from "./Footer"
+import "@vime/core/themes/defa  ult.css"
 
 export default function VideoPlayer(props: { lessonSlug: string }) {
   const { isSidebarOpen } = useContext(sidebarContext) as SidebarContext
@@ -24,7 +24,7 @@ export default function VideoPlayer(props: { lessonSlug: string }) {
       <div className='bg-black flex  justify-center'>
         <div className='h-full w-full max-w-[1100px] max-h-[60vh] aspect-video'>
           <Player>
-            <Youtube videoId={data.lesson.videoId} />
+            <Youtube videoId={data.lesson.videoId} key={data.lesson.videoId} />
             <DefaultUi />
           </Player>
         </div>

@@ -5588,6 +5588,11 @@ export type GetLessonsQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type GetLessonsQuery = { __typename?: 'Query', lessons: Array<{ __typename?: 'Lesson', slug: string, title: string, id: string, lessonType: LessonType, availableAt?: any | null }> };
 
+export type GetvideosIdAndSlugQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetvideosIdAndSlugQuery = { __typename?: 'Query', lessons: Array<{ __typename?: 'Lesson', slug: string, videoId: string }> };
+
 
 export const CreateSubscriberDocument = gql`
     mutation CreateSubscriber($name: String!, $email: String!) {
@@ -5703,3 +5708,38 @@ export function useGetLessonsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions
 export type GetLessonsQueryHookResult = ReturnType<typeof useGetLessonsQuery>;
 export type GetLessonsLazyQueryHookResult = ReturnType<typeof useGetLessonsLazyQuery>;
 export type GetLessonsQueryResult = Apollo.QueryResult<GetLessonsQuery, GetLessonsQueryVariables>;
+export const GetvideosIdAndSlugDocument = gql`
+    query GetvideosIdAndSlug {
+  lessons {
+    slug
+    videoId
+  }
+}
+    `;
+
+/**
+ * __useGetvideosIdAndSlugQuery__
+ *
+ * To run a query within a React component, call `useGetvideosIdAndSlugQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetvideosIdAndSlugQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetvideosIdAndSlugQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetvideosIdAndSlugQuery(baseOptions?: Apollo.QueryHookOptions<GetvideosIdAndSlugQuery, GetvideosIdAndSlugQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetvideosIdAndSlugQuery, GetvideosIdAndSlugQueryVariables>(GetvideosIdAndSlugDocument, options);
+      }
+export function useGetvideosIdAndSlugLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetvideosIdAndSlugQuery, GetvideosIdAndSlugQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetvideosIdAndSlugQuery, GetvideosIdAndSlugQueryVariables>(GetvideosIdAndSlugDocument, options);
+        }
+export type GetvideosIdAndSlugQueryHookResult = ReturnType<typeof useGetvideosIdAndSlugQuery>;
+export type GetvideosIdAndSlugLazyQueryHookResult = ReturnType<typeof useGetvideosIdAndSlugLazyQuery>;
+export type GetvideosIdAndSlugQueryResult = Apollo.QueryResult<GetvideosIdAndSlugQuery, GetvideosIdAndSlugQueryVariables>;

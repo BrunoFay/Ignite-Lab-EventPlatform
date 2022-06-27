@@ -47,21 +47,21 @@ export default function Subscribe() {
             <input
               name='name'
               type="text"
-              className='lg:bg-gray-900 bg-gray-600 rounded px-5 h-14'
+              className='lg:bg-gray-900 focus:outline outline-2 outline-green-500 bg-gray-600 rounded px-5 h-14'
               placeholder='Seu nome completo'
               onChange={handleFormData}
             />
             <input
               name='email'
               type="email"
-              className='lg:bg-gray-900 bg-gray-600 rounded px-5 h-14'
+              className='lg:bg-gray-900 focus:outline outline-2 outline-green-500 bg-gray-600 rounded px-5 h-14'
               placeholder='Digite seu email'
               onChange={handleFormData}
             />
             <button
               type='submit'
               disabled={loading}
-              className='mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 disabled:opacity-50'
+              className='mt-4 bg-green-500 focus:outline outline-2 outline-green-500 focus:bg-green-700 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 disabled:opacity-50'
             >
               garantir minha vaga
             </button>
