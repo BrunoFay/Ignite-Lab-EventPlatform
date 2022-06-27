@@ -47,7 +47,7 @@ Project developed during the <a href="https://www.rocketseat.com.br/"> Rocketsea
 - GraphCMS
 - Vite
 - NodeJs
-- react
+- React
 - TypeScript
 - TailwindCSS
 
